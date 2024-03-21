@@ -1,0 +1,12 @@
+.grouplist
+{
+    list-style: none;
+    border-bottom: 1px solid gray;
+    background-color: purple;
+}
+
+.grouplistitem
+{
+    border-bottom: 1px solid red;
+    line-height: 30px;
+}

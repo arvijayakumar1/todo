@@ -1,23 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
-
+import ToDoList from './components/TodoList';
+import getToDoItems, { getTitle } from './components/ds/todos';
+import './App.css'
 function App() {
+  const todoitems = getToDoItems();
+  const todoitems2 = ["1","2","3"];
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      Welcome to React App
+      <ToDoList myitems={todoitems} mytitle={getTitle()}/>
+      <ToDoList myitems={todoitems2} mytitle="second" />
     </div>
   );
 }
